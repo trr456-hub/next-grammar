@@ -7,9 +7,23 @@ export default function navBar() {
   const router = useRouter();
 
   return (
-    <nav className={style.nav}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
+    <nav>
+      <Link
+        className={`${style.link} ${
+          router.pathname === "/" ? style.active : ""
+        }`}
+        href="/"
+      >
+        Home
+      </Link>
+      <Link
+        className={`${style.link} ${
+          router.pathname === "/about" ? style.active : ""
+        }`}
+        href="/about"
+      >
+        About
+      </Link>
     </nav>
   );
 }

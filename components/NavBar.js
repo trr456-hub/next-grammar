@@ -1,29 +1,29 @@
 /**기존 a태그 href 방식은 사라지고 Link 를 임포트하여 라우팅을 처리해야함 */
 import Link from "next/link";
 import { useRouter } from "next/router";
-import style from "./NavBar.module.css";
 
 export default function navBar() {
   const router = useRouter();
 
   return (
     <nav>
-      <Link
-        className={`${style.link} ${
-          router.pathname === "/" ? style.active : ""
-        }`}
-        href="/"
-      >
-        Home
+      <Link href="/" legacyBehavior>
+        <a className={router.pathname === "/" ? "active" : ""}>Home</a>
       </Link>
-      <Link
-        className={`${style.link} ${
-          router.pathname === "/about" ? style.active : ""
-        }`}
-        href="/about"
-      >
-        About
+      <Link href="/about" legacyBehavior>
+        <a className={router.pathname === "/about" ? "active" : ""}>About</a>
       </Link>
+      <style jsx>{`
+        nav {
+          background-color: tomato;
+        }
+        a {
+          text-decoration: none;
+        }
+        .active {
+          color: yellow;
+        }
+      `}</style>
     </nav>
   );
 }

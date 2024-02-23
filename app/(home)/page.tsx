@@ -1,9 +1,10 @@
-import Navigation from "../components/navigation";
+export const metadata = {
+  title: "qweqwe",
+};
 
 const test = () => {
   return (
     <div>
-      <Navigation />
       <h1>Hello</h1>
     </div>
   );

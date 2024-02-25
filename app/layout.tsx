@@ -29,3 +29,4 @@ export default function RootLayout({
 // layout은 상쇄되는게 아닌 중첩된다.
 // (폴더명) 이렇게 폴더를 구성 해준다면 URL에 영향을 받지않음
 // metadata 페이지 마다 템플릿을 만들어줄 수 있다.
+// 동적 routing 은 [폴더명] 으로 변수를 전달해준다

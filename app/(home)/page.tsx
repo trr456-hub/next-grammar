@@ -1,4 +1,6 @@
 import Link from "next/link";
+import styles from "../../styles/home.module.css";
+import Movie from "../../components/movie";
 
 export const metadata = {
   title: "hompage",
@@ -17,11 +19,17 @@ const Home = async () => {
   const movies = await getMoives();
   return (
     <div>
-      <h1>
+      <h1 className={styles.container}>
         {movies.map((movie) => (
-          <li key={movie.id}>
-            <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
-          </li>
+          // <li key={movie.id}>
+          //   <Link href={`/movies/${movie.id}`}>{movie.title}</Link>
+          // </li>
+          <Movie
+            key={movie.id}
+            id={movie.id}
+            poster_path={movie.poster_path}
+            title={movie.title}
+          />
         ))}
       </h1>
     </div>

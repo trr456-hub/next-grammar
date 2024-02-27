@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "../../styles/home.module.css";
 import Movie from "../../components/movie";
 import { API_URL } from "../constants";

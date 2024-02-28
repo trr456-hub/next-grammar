@@ -3,6 +3,8 @@
 ## next js 14 세팅방법
 
 - 빈 프로젝트 생성한뒤 npm init -y
+- package.json 에서 license MIT 변경
+- app/page.tsx,jsx 생성 후 page에 export default function 생성후 npm run dev
 - 터미널에서 npm i react@latest next@latest react-dom@latest 명령어 사용하여 패키지 설치
 - package.json 에서 script 설정에 "dev": "next dev" 추가
 
